@@ -28,7 +28,8 @@ def somme(valeur1, valeur2):
         parity = "pair"
     else:
         parity = "impair"
-    return"""
+    return f"""
         <h2>La somme de vos valeurs est : {result}</h2>
-        <p>La somme est un nombre <strong>{parity}</strong>.</p>"""
+        <p>La somme est un nombre <strong>{parity}</strong>.</p>
+    """
 
