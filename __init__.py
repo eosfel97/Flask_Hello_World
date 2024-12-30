@@ -21,15 +21,29 @@ def MaPremiereAPI():
 def carre(val_user):
     return "<h2>Le carré de votre valeur est : </h2>" + str(val_user * val_user)
 
-@app.route('/somme/<int:valeur1>/<int:valeur2>')
-def somme(valeur1, valeur2):
-    result = valeur1 + valeur2
-    if result % 2 == 0:
-        parity = "pair"
-    else:
-        parity = "impair"
+    #exo 4 et 5
+
+ #@app.route('/somme/<int:valeur1>/<int:valeur2>')
+#def somme(valeur1, valeur2):
+ #   result = valeur1 + valeur2
+  #  if result % 2 == 0:
+   #     parity = "pair"
+    #else:
+     #   parity = "impair"
+    #return f"""
+    #    <h2>La somme de vos valeurs est : {result}</h2>
+    #    <p>La somme est un nombre <strong>{parity}</strong>.</p>
+    #"""
+
+@app.route('/somme/<values>')
+def somme_total(values):
+    try:
+        valeurs = list(map(int, values.split(',')))
+        result = sum(valeurs)
+    except ValueError:
+        return "<h2>Veuillez entrer uniquement des nombres entiers séparés par des virgules.</h2>"
+
     return f"""
         <h2>La somme de vos valeurs est : {result}</h2>
-        <p>La somme est un nombre <strong>{parity}</strong>.</p>
+        <p>Les valeurs saisies sont : {', '.join(map(str, valeurs))}</p>
     """
-
