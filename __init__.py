@@ -60,3 +60,6 @@ def max_value(values):
         <h2>La valeur maximale saisie est : {max_val}</h2>
         <p>Les valeurs saisies sont : {', '.join(map(str, valeurs))}</p>
     """
+@app.route('/cv')
+def cv():
+    return render_template('cv.html')
