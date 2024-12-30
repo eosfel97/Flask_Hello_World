@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0;
@@ -8,36 +8,58 @@ body {
 }
 
 .container {
-  width: 80%;
+  width: 85%;
   margin: auto;
-  overflow: hidden;
   padding: 20px;
   background: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
-header {
-  text-align: center;
+.cv-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #007BFF;
+  padding-bottom: 10px;
   margin-bottom: 20px;
 }
 
-header .photo {
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  margin-bottom: 10px;
+.photo-container {
+  flex: 1;
+  text-align: center;
 }
 
-header h1 {
+.photo {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 3px solid #007BFF;
+}
+
+.header-details {
+  flex: 3;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.header-details h1 {
   font-size: 2.5em;
   color: #007BFF;
   margin: 0;
 }
 
-header p {
-  font-size: 1.1em;
+.header-details h2 {
+  font-size: 1.5em;
+  color: #555;
   margin: 5px 0;
+}
+
+.contact-info {
+  font-size: 1em;
+  color: #555;
+  margin-top: 10px;
 }
 
 section {
@@ -45,62 +67,57 @@ section {
 }
 
 section h2 {
-  font-size: 1.5em;
+  font-size: 1.8em;
   border-bottom: 2px solid #007BFF;
-  display: inline-block;
   margin-bottom: 10px;
   color: #333;
+  display: inline-block;
 }
 
-section ul {
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 1em;
+}
+
+table th, table td {
+  text-align: left;
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background-color: #007BFF;
+  color: #fff;
+}
+
+.skills ul, .languages ul {
   list-style: none;
   padding: 0;
 }
 
-section ul li {
-  margin: 10px 0;
-  padding: 5px 0;
-  border-bottom: 1px dotted #ccc;
-}
-
-section ul li:last-child {
-  border-bottom: none;
-}
-
-.languages ul, .qualities ul, .hobbies ul {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.languages ul li, .qualities ul li, .hobbies ul li {
-  flex: 1 1 45%;
-  margin-bottom: 10px;
-}
-
-.skills ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 10px;
-}
-
-.skills ul li {
-  padding: 10px;
+.skills ul li, .languages ul li {
   background: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 5px;
   border: 1px solid #ddd;
   border-radius: 5px;
-  text-align: center;
+}
+
+.references p {
+  font-style: italic;
+  color: #555;
 }
 
 @media (max-width: 768px) {
-  .container {
-      width: 95%;
+  .cv-header {
+      flex-direction: column;
+      align-items: center;
   }
 
-  header h1 {
-      font-size: 2em;
-  }
-
-  .skills ul {
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  .header-details {
+      text-align: center;
+      padding-left: 0;
   }
 }
