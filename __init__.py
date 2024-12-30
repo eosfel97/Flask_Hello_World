@@ -47,3 +47,16 @@ def somme_total(values):
         <h2>La somme de vos valeurs est : {result}</h2>
         <p>Les valeurs saisies sont : {', '.join(map(str, valeurs))}</p>
     """
+
+@app.route('/max/<values>')
+def max_value(values):
+    try:
+        valeurs = list(map(int, values.split(',')))
+        max_val = max(valeurs) 
+    except ValueError:
+        return "<h2>Veuillez entrer uniquement des nombres entiers séparés par des virgules.</h2>"
+
+    return f"""
+        <h2>La valeur maximale saisie est : {max_val}</h2>
+        <p>Les valeurs saisies sont : {', '.join(map(str, valeurs))}</p>
+    """
