@@ -65,5 +65,5 @@ def cv():
     return render_template('cv.html')
 
 @app.route('/page1')
-def cv():
+def page1():
     return render_template('page1.html')
