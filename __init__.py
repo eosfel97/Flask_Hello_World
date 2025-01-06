@@ -67,3 +67,7 @@ def cv():
 @app.route('/page1')
 def page1():
     return render_template('page1.html')
+
+@app.route('/actualite')
+def actualite():
+    return render_template('actualite.html')
