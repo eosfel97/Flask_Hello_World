@@ -63,3 +63,7 @@ def max_value(values):
 @app.route('/cv')
 def cv():
     return render_template('cv.html')
+
+@app.route('/page1')
+def cv():
+    return render_template('page1.html')
