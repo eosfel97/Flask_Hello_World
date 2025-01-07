@@ -6,3 +6,16 @@ table{
     border: 1px solid black;
     padding: 10px;
   }
+
+  .os{
+    display: flex;
+    align-items: flex-start;
+}
+.or{
+    display: flex;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
