@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .image-container {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 
 </head>
 <body>
@@ -39,7 +50,7 @@
                 container.style.display = 'none';
             });
 
-            const selecImage = document.querySelectorAll('input[name="imageChoice"]:checked');
+            const selecImage = document.querySelectorAll('input[name="imagechoix"]:checked');
 
             if (selecImage.length > 0) {
                 selecImage.forEach(function(selecImage) {
