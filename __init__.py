@@ -79,7 +79,7 @@ def outilsjs():
 
 
 @app.route('/Biblo')
-def outilsjs():
+def biblo():
     return render_template('Biblo_Images.html')
 
 
