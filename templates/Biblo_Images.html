@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        
+
     .image-container {
         display: none;
         margin-top: 20px;
@@ -43,6 +43,25 @@
     <div id="image3" class="image-container">
         <img src="../static/south-park-vinyl-figurine-real-estate-cartman-7-cm.jpg" alt="Image 3">
     </div>
+    <script>
+        document.getElementById('affiche').addEventListener('click', function() {
+
+            document.querySelectorAll('.image-container').forEach(function(container) {
+                container.style.display = 'none';
+            });
+
+            const selecImage = document.querySelectorAll('input[name="imageChoice"]:checked');
+
+            if (selecImage.length > 0) {
+                selecImage.forEach(function(selecImage) {
+                    const imageId = selecImage.value;
+                    document.getElementById(imageId).style.display = 'block';
+                });
+            } else {
+                alert('pensez a selectionner une image.');
+            }
+        });
+    </script>
 
 </body>
 </html>
