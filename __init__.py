@@ -78,9 +78,9 @@ def outilsjs():
     return render_template('Outils_JS.html')
 
 
-@app.route('/outilsjs')
+@app.route('/Biblo')
 def outilsjs():
-    return render_template('Outils_JS.html')
+    return render_template('Biblo_Images.html')
 
 
 if __name__ == "__main__":
