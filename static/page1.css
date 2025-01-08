@@ -6,8 +6,7 @@ table{
     border: 1px solid black;
     padding: 10px;
   }
-
-  .os{
+.os{
     display: flex;
     align-items: flex-start;
 }
