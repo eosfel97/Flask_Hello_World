@@ -76,3 +76,12 @@ def actualite():
 @app.route('/outilsjs')
 def outilsjs():
     return render_template('Outils_JS.html')
+
+
+@app.route('/outilsjs')
+def outilsjs():
+    return render_template('Outils_JS.html')
+
+
+if __name__ == "__main__":
+  app.run(debug=True)
