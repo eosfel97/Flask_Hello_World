@@ -82,6 +82,10 @@ def outilsjs():
 def biblo():
     return render_template('Biblo_Images.html')
 
+@app.route('/carre')
+def carre():
+    return render_template('Carre_Etoiles.html')
+
 
 if __name__ == "__main__":
   app.run(debug=True)
