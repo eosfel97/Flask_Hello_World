@@ -83,7 +83,7 @@ def biblo():
     return render_template('Biblo_Images.html')
 
 @app.route('/carre_etoile')
-def carre():
+def carre_etoile():
     return render_template('Carre_Etoiles.html')
 
 
