@@ -20,10 +20,11 @@ function principale(){
 	
 }
 
-function bouger(){
-
-	//Code à créer pour faire bouger la boule enemy
-	
+function bouger(enemy){
+var ballX = parseInt(document.getElementById('ballA').getAttribute("cx"));
+                            ballX -= 15;
+                    	if(ballX<15){ballX=15;}
+			document.getElementById('ballA').setAttribute("cx", ballX);	
 }
 
 
