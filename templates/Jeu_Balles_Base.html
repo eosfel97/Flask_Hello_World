@@ -39,26 +39,25 @@ function deplacement(evt) {
 			break;
                 // Droite 
                 case 39:
-			ballX -= -15;
-                    	if(ballX<-15){ballX=-15;}
+			ballX += 15;
+                    	if(ballX>885){ballX=885;}
 			document.getElementById('ball').setAttribute("cx", ballX);
 			break;
 
 
 		// Haut 
-                case 38:
-			   ballY -= 15;
-                    	if(ballY<15){ballY=15;}
+              case 40:
+			   ballY += 15;
+                    	if(ballY>385){ballY=385;}
 			document.getElementById('ball').setAttribute("cy", ballY);
 			break;
 
 
 		// Bas 
-                case 40:
-
-			    case 38:
-			   ballY -= -15;
-                    	if(ballY<-15){ballY=-15;}
+               
+            case 38:
+			   ballY -= 15;
+                    	if(ballY<15){ballY=15;}
 			document.getElementById('ball').setAttribute("cy", ballY);
 			break;
 
@@ -77,4 +76,3 @@ function deplacement(evt) {
 	</svg>
 <body>
 </html>
-
