@@ -85,7 +85,7 @@ def biblo():
 @app.route('/carre_etoile')
 def carre_etoile():
     return render_template('Carre_Etoiles.html')
-  @app.route('/jeu')
+@app.route('/jeu')
 def jeux_base():
     return render_template('Jeu_Balles_Base.html')
 
