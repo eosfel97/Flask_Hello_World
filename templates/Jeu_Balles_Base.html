@@ -22,15 +22,22 @@ function principale(){
 
 function bouger(){
 var ballX = parseInt(document.getElementById('ballA').getAttribute("cx"));
+var ballY = parseInt(document.getElementById('ballA').getAttribute("cy"));
+var ballYy = parseInt(document.getElementById('ball').getAttribute("cy"));
+                                
                             ballX -= 15;
                     	if(ballX<15){ballX=15;}
 			document.getElementById('ballA').setAttribute("cx", ballX);	
+            if(ballY<ballYy){ ballY -=15}
+                    document.getElementById('ballA').setAttribute("cy", ballYy);	
+          if(ballY>ballYy){ ballY +=15}
+                    document.getElementById('ballA').setAttribute("cy", ballYy);	
+
 }
-
-
 function deplacement(evt) {
 		   var ballX = parseInt(document.getElementById('ball').getAttribute("cx"));
 		   var ballY = parseInt(document.getElementById('ball').getAttribute("cy"));
+
            switch (evt.keyCode) {
                 // Gauche 
                 case 37:
@@ -51,6 +58,7 @@ function deplacement(evt) {
 			   ballY += 15;
                     	if(ballY>385){ballY=385;}
 			document.getElementById('ball').setAttribute("cy", ballY);
+        
 			break;
 
 
@@ -60,6 +68,7 @@ function deplacement(evt) {
 			   ballY -= 15;
                     	if(ballY<15){ballY=15;}
 			document.getElementById('ball').setAttribute("cy", ballY);
+     
 			break;
 
 
@@ -73,8 +82,8 @@ function deplacement(evt) {
 	<h1>Jeux Javascript</h1>
 	<svg id="zonedejeux">
 	<circle cx="450" cy="200" r="15" fill="tomato" id="ball" />
-	<circle cx="885" cy="200" r="15" fill="blue" id="ballA" />
-	
+    <circle cx="885" cy="200" r="15" fill="blue" id="ballA" />
+
 	</svg>
 <body>
 </html>
