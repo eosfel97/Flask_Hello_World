@@ -85,9 +85,16 @@ def biblo():
 @app.route('/carre_etoile')
 def carre_etoile():
     return render_template('Carre_Etoiles.html')
+
 @app.route('/jeu')
 def jeux_base():
     return render_template('Jeu_Balles_Base.html')
+
+@app.route('/roulette_russe')
+def roulette_russe():
+    return render_template('Roulette_Russe_Etape_1_Barillet_Vide.html')
+
+
 
 
 if __name__ == "__main__":
